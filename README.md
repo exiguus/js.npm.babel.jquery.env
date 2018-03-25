@@ -36,7 +36,7 @@ open src/index.jquery.html
 #### Qunit
 Run [QUnit](https://qunitjs.com/) test with [PhantomJS](http://phantomjs.org/) for CI:
 ```
-npm run test-qunit
+npm run test-qunit && npm run test-qunit-min
 ```
 Run [QUnit](https://qunitjs.com/) test in development:
 ```
@@ -74,10 +74,10 @@ Note: [Grunt](https://gruntjs.com/) use [jit](https://www.npmjs.com/package/jit-
 Continuous integration is preconfigured with Travis-CI in `.travis.yml` running within a `node` environment and with all necessary `npm install -g`for [PhantomJS](http://phantomjs.org/), webpack-ci etc.
 
 ## ESLint
-ESLint is extended with [Standard JS](https://standardjs.com/) and preconfigured for [QUnit](https://qunitjs.com/), Jasmine and node.  
+ESLint is extended with [Standard JS](https://standardjs.com/) and preconfigured for [QUnit](https://qunitjs.com/), [Jasmine](https://jasmine.github.io/) and node.  
 
 ## Babel
-[Babel](https://babeljs.io/) is runs in env mode for ECMA2015 and [Webpack4](https://webpack.js.org/)
+[Babel](https://babeljs.io/) is running in env mode for ECMA2015 and [Webpack4](https://webpack.js.org/)
 
 ## npm
 [np](https://github.com/sindresorhus/np) is a better `npm publish`
