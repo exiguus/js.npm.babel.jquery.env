@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "standard"
+  ],
+  "env": {
+      "jasmine": true,
+      "qunit": true,
+      "node": true
+  }
+}
