@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.1.0
+### Feature
+* add jsdocs
+* replace eslint standard with google and recommanded
+* add eslint and jsdoc to build process
+
 ## 1.0.0
 ### Feature
 * Development for Babel/ECMA2015 and jQuery

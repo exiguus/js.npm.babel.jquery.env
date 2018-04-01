@@ -74,7 +74,10 @@ Note: [Grunt](https://gruntjs.com/) use [jit](https://www.npmjs.com/package/jit-
 Continuous integration is preconfigured with Travis-CI in `.travis.yml` running within a `node` environment and with all necessary `npm install -g`for [PhantomJS](http://phantomjs.org/), webpack-ci etc.
 
 ## ESLint
-ESLint is extended with [Standard JS](https://standardjs.com/) and preconfigured for [QUnit](https://qunitjs.com/), [Jasmine](https://jasmine.github.io/) and node.  
+ESLint `eslint:recommanded` is extended with [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html) and preconfigured for [QUnit](https://qunitjs.com/), [Jasmine](https://jasmine.github.io/), [jQuery](https://jquery.com/), es6, node and browser env.  
+
+## JSDoc
+JSDoc documention is generated with the standard Build
 
 ## Babel
 [Babel](https://babeljs.io/) is running in env mode for ECMA2015 and [Webpack4](https://webpack.js.org/)
@@ -83,7 +86,7 @@ ESLint is extended with [Standard JS](https://standardjs.com/) and preconfigured
 [np](https://github.com/sindresorhus/np) is a better `npm publish`
 
 # Git
-* tag releases with `package.json` version
+tag releases with `package.json` version
 
 [tests]: https://img.shields.io/travis/exiguus/js.npm.babel.jquery.env/master.svg
 [tests-url]: https://travis-ci.org/exiguus/js.npm.babel.jquery.env
