@@ -1,4 +1,7 @@
 # Change Log
+## 1.1.2
+### Feature
+* add code covarage and maintainablity tests
 
 ## 1.1.1
 ### Feature

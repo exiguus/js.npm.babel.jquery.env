@@ -1,4 +1,6 @@
 [![tests][tests]][tests-url]
+[![coverage][coverage]][coverage-url]
+[![maintainability][maintainability]][maintainability-url]
 
 # js.npm.babel.jquery.env
 Boiler Plate to build tested [npm packages](https://www.npmjs.com/) in [ECMAScript 2015](http://www.ecma-international.org/ecma-262/6.0/) and [jQuery](https://jquery.com/).
@@ -52,7 +54,7 @@ Run [QUnit](https://qunitjs.com/) and [Karma](https://karma-runner.github.io/)/[
 ```
 npm run test
 ```
-Test ES6 class/modules in `src/js/*.test.js` and jQuery Plugins in `src/index.jquery.test.html` or `src/index.jquery.min.test.html`.
+Run `npm run build` and test ES6 class/modules in `src/js/*.test.js` and jQuery Plugins in `src/index.jquery.test.html` or `src/index.jquery.min.test.html`.
 
 Take a look at the Karma configuration at `karma.conf.js`and into `src/index.jquery.test.html`or `src/index.jquery.test.min.html`
 
@@ -90,3 +92,13 @@ tag releases with `package.json` version
 
 [tests]: https://img.shields.io/travis/exiguus/js.npm.babel.jquery.env/master.svg
 [tests-url]: https://travis-ci.org/exiguus/js.npm.babel.jquery.env
+
+[maintainability]:
+https://api.codeclimate.com/v1/badges/062e90f36125daa7d8ee/maintainability
+[maintainability-url]:
+https://codeclimate.com/github/exiguus/js.npm.babel.jquery.env/maintainability
+
+[coverage]:
+https://api.codeclimate.com/v1/badges/062e90f36125daa7d8ee/test_coverage
+[coverage-url]:
+https://codeclimate.com/github/exiguus/js.npm.babel.jquery.env/test_coverage
