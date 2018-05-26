@@ -1,4 +1,8 @@
 # Change Log
+## 1.2.0
+* add karma run for jquery and es6 unit tests
+* add karma and istanbul run for coverage reports
+
 ## 1.1.2
 ### Feature
 * add code covarage and maintainablity tests

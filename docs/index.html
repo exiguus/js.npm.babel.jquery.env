@@ -46,33 +46,39 @@
         <article><p><a href="https://travis-ci.org/exiguus/js.npm.babel.jquery.env"><img src="https://img.shields.io/travis/exiguus/js.npm.babel.jquery.env/master.svg" alt="tests"></a>
 <a href="https://codeclimate.com/github/exiguus/js.npm.babel.jquery.env/test_coverage"><img src="https://api.codeclimate.com/v1/badges/062e90f36125daa7d8ee/test_coverage" alt="coverage"></a>
 <a href="https://codeclimate.com/github/exiguus/js.npm.babel.jquery.env/maintainability"><img src="https://api.codeclimate.com/v1/badges/062e90f36125daa7d8ee/maintainability" alt="maintainability"></a></p>
-<h1>js.npm.babel.jquery.env</h1><p>Boiler Plate to build tested <a href="https://www.npmjs.com/">npm packages</a> in <a href="http://www.ecma-international.org/ecma-262/6.0/">ECMAScript 2015</a> and <a href="https://jquery.com/">jQuery</a>.</p>
+<h1>js.npm.babel.jquery.env</h1><p>Boilerplate to build tested <a href="https://www.npmjs.com/">npm packages</a> in <a href="http://www.ecma-international.org/ecma-262/6.0/">ECMAScript 2015</a> and <a href="https://jquery.com/">jQuery</a>.</p>
+<p><img src="https://exiguus.github.io/js.device.detector/static/js.npm.babel.jquery.env.tests.gif" alt="test-run"></p>
 <h2>ECMAScript 2015</h2><p>ES6 Development Environment includes <a href="https://webpack.js.org/">Webpack4</a>, <a href="https://babeljs.io/">Babel</a>, and <a href="https://jasmine.github.io/">Jasmine</a>.</p>
 <h2>Development</h2><h3>Webpack4</h3><p>Run Webpack4 in development mode with babel-loader ECMA2015 support.</p>
 <pre class="prettyprint source"><code>npm run dev</code></pre><p>Runs <a href="https://webpack.js.org/">Webpack4</a> with webpack-dev-server and babel-loader on port 8080 and bundle <code>src/index.js</code> in <code>src/index.html</code>. Also starts <a href="https://karma-runner.github.io/">Karma</a>/<a href="https://jasmine.github.io/">Jasmine</a> Unit tests in development mode.</p>
-<p>Note: Node Version must be greater or equal to Version 6 because of Webpack4.</p>
-<h4>Jasmine</h4><p>Run Karma/Jasmine test with <a href="https://webpack.js.org/">Webpack4</a>/babel-loader and <a href="http://phantomjs.org/">PhantomJS</a>.
-Run the <a href="https://karma-runner.github.io/">Karma</a>/<a href="https://jasmine.github.io/">Jasmine</a> test in single-run mode for CI:</p>
-<pre class="prettyprint source"><code>npm run test-karma</code></pre><p>Runs the <a href="https://karma-runner.github.io/">Karma</a>/<a href="https://jasmine.github.io/">Jasmine</a> test in development mode:</p>
-<pre class="prettyprint source"><code>npm run dev-karma</code></pre><h3>jQuery</h3><p><a href="https://jquery.com/">jQuery</a> Development Environment includes <a href="https://gruntjs.com/">Grunt</a> and <a href="https://qunitjs.com/">QUnit</a>.</p>
-<pre class="prettyprint source"><code>open src/index.jquery.html</code></pre><h4>Qunit</h4><p>Run <a href="https://qunitjs.com/">QUnit</a> test with <a href="http://phantomjs.org/">PhantomJS</a> for CI:</p>
+<p>Also runs the <a href="https://karma-runner.github.io/">Karma</a>/<a href="https://jasmine.github.io/">Jasmine</a> test in development mode:</p>
+<pre class="prettyprint source"><code>npm run dev-karma</code></pre><p>Note: Node Version must be greater or equal to Version 6 because of Webpack4.</p>
+<h4>Jasmine</h4><p>Run Karma/Jasmine test with <a href="https://webpack.js.org/">Webpack4</a>/babel-loader and <a href="http://phantomjs.org/">PhantomJS</a> and generate a Coverage report with <a href="https://istanbul.js.org/">Istanbul</a> in <code>coverage/es6/</code>.</p>
+<p>Run the <a href="https://karma-runner.github.io/">Karma</a>/<a href="https://jasmine.github.io/">Jasmine</a> test in single-run mode for CI:</p>
+<pre class="prettyprint source"><code>npm run test-jasmine-coverage</code></pre><hr>
+<h3>jQuery</h3><p><a href="https://jquery.com/">jQuery</a> Development Environment includes <a href="https://gruntjs.com/">Grunt</a> and <a href="https://qunitjs.com/">QUnit</a>.</p>
+<pre class="prettyprint source"><code>open src/index.jquery.html</code></pre><h4>Qunit</h4><p>Run <a href="https://karma-runner.github.io/">Karma</a>/<a href="https://qunitjs.com/">QUnit</a> test with <a href="http://phantomjs.org/">PhantomJS</a> and generate a Coverage report with <a href="https://istanbul.js.org/">Istanbul</a> in <code>coverage/jquery/</code>.</p>
+<p>Run the <a href="https://karma-runner.github.io/">Karma</a>/<a href="https://qunitjs.com/">QUnit</a> test in single-run mode for CI:</p>
+<pre class="prettyprint source"><code>npm run test-qunit-coverage</code></pre><h4>Qunit integration tests</h4><p>Run <code>node-qunit-phantomjs</code> against the <code>dist</code> folder:</p>
 <pre class="prettyprint source"><code>npm run test-qunit && npm run test-qunit-min</code></pre><p>Run <a href="https://qunitjs.com/">QUnit</a> test in development:</p>
 <pre class="prettyprint source"><code>open src/index.jquery.test.html</code></pre><p>or against the uglify version</p>
-<pre class="prettyprint source"><code>open src/index.jquery.test.min.html</code></pre><h2>Test</h2><p>Run <a href="https://qunitjs.com/">QUnit</a> and <a href="https://karma-runner.github.io/">Karma</a>/<a href="https://jasmine.github.io/">Jasmine</a> test in production mode for CI:</p>
-<pre class="prettyprint source"><code>npm run test</code></pre><p>Run <code>npm run build</code> and test ES6 class/modules in <code>src/js/*.test.js</code> and jQuery Plugins in <code>src/index.jquery.test.html</code> or <code>src/index.jquery.min.test.html</code>.</p>
-<p>Take a look at the Karma configuration at <code>karma.conf.js</code>and into <code>src/index.jquery.test.html</code>or <code>src/index.jquery.test.min.html</code></p>
+<pre class="prettyprint source"><code>open src/index.jquery.test.min.html</code></pre><h2>Test</h2><p>Run <a href="https://qunitjs.com/">QUnit</a> and <a href="https://jasmine.github.io/">Jasmine</a> Unit and Integration Tests in production mode for CI:</p>
+<pre class="prettyprint source"><code>npm test</code></pre><p>Run <code>npm run build</code> and test ES6 class/modules in <code>src/js/*.test.js</code> and jQuery Plugins in <code>src/index.jquery.test.html</code> or <code>src/index.jquery.min.test.html</code>, generate Coverage Reports and Documentation.</p>
+<p>Take a look at the <a href="https://karma-runner.github.io/">Karma</a> configuration at <code>karma.jquery.config.js</code> or <code>karma.es6.config.js</code> and into <code>src/index.jquery.test.html</code>or <code>src/index.jquery.test.min.html</code></p>
 <p>Note: <code>npm run dist</code> must run before the CI tests are running.</p>
 <h2>Dist</h2><p>Run <a href="https://gruntjs.com/">Grunt</a> Build Tasks for <code>dist/</code>.</p>
-<pre class="prettyprint source"><code>npm run dist</code></pre><p>Clean, Copy, Uglify and Usebanner from <code>src/js/</code> to <code>build/</code>.</p>
+<pre class="prettyprint source"><code>npm run dist</code></pre><p>Clean, Copy, Uglify and Usebanner from <code>src/js/</code> to <code>build/</code> and generate <code>docs</code> with <a href="http://usejsdoc.org/">JSDoc</a> and <a href="https://istanbul.js.org/">Istanbul</a>.</p>
+<p>See <code>build/helper/_grunt/</code> for all tasks.</p>
 <p>Take a look into <code>build/helper/config.js</code> to setup config variables or the usebanner.
 Also <code>Gruntfile.js</code> and <code>build/helper/_grunt/</code> may be interesting.</p>
 <p>Note: <a href="https://gruntjs.com/">Grunt</a> use <a href="https://www.npmjs.com/package/jit-grunt">jit</a> to load <a href="https://gruntjs.com/">Grunt</a> Tasks.</p>
-<h2>CI</h2><p>Continuous integration is preconfigured with Travis-CI in <code>.travis.yml</code> running within a <code>node</code> environment and with all necessary <code>npm install -g</code>for <a href="http://phantomjs.org/">PhantomJS</a>, webpack-ci etc.</p>
+<h2>CI</h2><p>Continuous integration is preconfigured with Travis-CI in <code>.travis.yml</code> running within a <code>node</code> environment.</p>
+<p>Maintainability and Coverage Reports are integrated with Code Climate (See <code>.codeclimate.yml</code>).</p>
 <h2>ESLint</h2><p>ESLint <code>eslint:recommanded</code> is extended with <a href="https://google.github.io/styleguide/jsguide.html">Google JavaScript Style Guide</a> and preconfigured for <a href="https://qunitjs.com/">QUnit</a>, <a href="https://jasmine.github.io/">Jasmine</a>, <a href="https://jquery.com/">jQuery</a>, es6, node and browser env.  </p>
-<h2>JSDoc</h2><p>JSDoc documention is generated with the standard Build</p>
+<h2>JSDoc</h2><p><a href="http://usejsdoc.org/">JSDoc</a> documention is generated with the standard Build in <code>docs/</code> and available at https://exiguus.github.io/js.npm.babel.jquery.env/</p>
+<h2>Istanbul</h2><p><a href="https://istanbul.js.org/">Istanbul</a> Coverage Reports (HTML, Icov, teamcity, cobertura and text) are generated during the test phase in <code>coverage/</code> and will be copied to <code>docs/coverage/</code>. The <code>Icov.info</code> report is used with Code Climate <code>cc-test-report</code> in <code>travis.yml</code>. The Reports are available at https://exiguus.github.io/js.npm.babel.jquery.env/coverage/es6/ and https://exiguus.github.io/js.npm.babel.jquery.env/coverage/jquery/</p>
 <h2>Babel</h2><p><a href="https://babeljs.io/">Babel</a> is running in env mode for ECMA2015 and <a href="https://webpack.js.org/">Webpack4</a></p>
-<h2>npm</h2><p><a href="https://github.com/sindresorhus/np">np</a> is a better <code>npm publish</code></p>
-<h1>Git</h1><p>tag releases with <code>package.json</code> version</p></article>
+<h2>Karma</h2><p><a href="https://karma-runner.github.io/">Karma</a> test runner run Qunit and Jasmine Unit Tests and generate <a href="https://istanbul.js.org/">Istanbul</a> Coverage Reports in <code>coverage/</code></p></article>
     </section>
 
 
@@ -408,7 +414,7 @@ Also <code>Gruntfile.js</code> and <code>build/helper/_grunt/</code> may be inte
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sat May 19 2018 18:24:48 GMT+0200 (CEST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sat May 26 2018 21:47:09 GMT+0200 (CEST)
 </footer>
 
 <script> prettyPrint(); </script>
