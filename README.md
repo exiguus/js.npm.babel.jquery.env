@@ -140,4 +140,4 @@ https://api.codeclimate.com/v1/badges/062e90f36125daa7d8ee/test_coverage
 [coverage-url]:
 https://codeclimate.com/github/exiguus/js.npm.babel.jquery.env/test_coverage
 
-[test-run]: https://exiguus.github.io/js.device.detector/static/js.npm.babel.jquery.env.tests.gif
+[test-run]: https://exiguus.github.io/js.npm.babel.jquery.env/static/js.npm.babel.jquery.env.tests.gif

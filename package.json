@@ -1,7 +1,7 @@
 {
   "name": "js.npm.babel.jquery.env",
-  "version": "1.1.2",
-  "description": "Boiler Plate to build tested npm packages in ECMAScript 2015 and jQuery",
+  "version": "1.2.0",
+  "description": "Boilerplate to build tested npm packages in ECMAScript 2015 and jQuery",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
@@ -81,7 +81,11 @@
     "testing",
     "boilerplate",
     "jsdoc",
-    "eslint"
+    "eslint",
+    "ci-cd",
+    "CI/CD",
+    "continuous integration",
+    "continuous delivery"
   ],
   "main": "dist/mail.deobfuscate.module.js",
   "author": "Simon Gattner <npm@0x38.de>",
