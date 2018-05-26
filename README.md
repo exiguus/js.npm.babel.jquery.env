@@ -114,11 +114,11 @@ Maintainability and Coverage Reports are integrated with Code Climate (See `.cod
 ESLint `eslint:recommanded` is extended with [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html) and preconfigured for [QUnit](https://qunitjs.com/), [Jasmine](https://jasmine.github.io/), [jQuery](https://jquery.com/), es6, node and browser env.  
 
 ## JSDoc
-[JSDoc](http://usejsdoc.org/) documention is generated with the standard Build in `docs/` and available at https://exiguus.github.io/js.npm.babel.jquery.env/
+[JSDoc](http://usejsdoc.org/) documention is generated with the standard Build in `docs/` and available at the [Project Github Page](https://exiguus.github.io/js.npm.babel.jquery.env/)
 
 
 ## Istanbul
-[Istanbul](https://istanbul.js.org/) Coverage Reports (HTML, Icov, teamcity, cobertura and text) are generated during the test phase in `coverage/` and will be copied to `docs/coverage/`. The `Icov.info` report is used with Code Climate `cc-test-report` in `travis.yml`. The Reports are available at https://exiguus.github.io/js.npm.babel.jquery.env/coverage/es6/ and https://exiguus.github.io/js.npm.babel.jquery.env/coverage/jquery/
+[Istanbul](https://istanbul.js.org/) Coverage Reports (HTML, Icov, teamcity, cobertura and text) are generated during the test phase in `coverage/` and will be copied to `docs/coverage/`. The `Icov.info` report is used with Code Climate `cc-test-report` in `travis.yml`. The Reports are available at [ES6 Coverage Report Page](https://exiguus.github.io/js.npm.babel.jquery.env/coverage/es6/) and [jQuery Coverage Report Page](https://exiguus.github.io/js.npm.babel.jquery.env/coverage/jquery/)
 
 ## Babel
 [Babel](https://babeljs.io/) is running in env mode for ECMA2015 and [Webpack4](https://webpack.js.org/)

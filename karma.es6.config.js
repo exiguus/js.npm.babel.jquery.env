@@ -17,8 +17,7 @@ module.exports = (config) => {
     browsers: ['PhantomJS'],
     reporters: ['progress', 'coverage'],
     preprocessors: {
-      'src/js/*.class.test.js': ['webpack', 'coverage'],
-      'src/js/*.module.test.js': ['webpack', 'coverage'],
+      'src/js/*.js': ['webpack', 'coverage'],
     },
     coverageReporter: {
       dir: 'coverage/es6',
