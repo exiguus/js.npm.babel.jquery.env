@@ -6,7 +6,7 @@
 let config = require('./build/helper/config');
 config.options.pkg = require('./package.json');
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   // load only used tasks and add fallbacks for those which cannot be find
   require('jit-grunt')(grunt, {
     'replace': 'grunt-text-replace',
@@ -27,15 +27,16 @@ module.exports = function(grunt) {
    * TASKS
    */
 
-   grunt.registerTask('coverage', [
-     'copy:coverageEs6',
-     'copy:icovEs6',
-     'copy:coverageJquery',
-     'copy:icovJquery',
-   ]);
+  grunt.registerTask('coverage', [
+    'copy:coverageEs6',
+    'copy:icovEs6',
+    'copy:coverageJquery',
+    'copy:icovJquery',
+  ]);
 
   grunt.registerTask('build', [
     'eslint',
+    'webpack',
     'uglify',
   ]);
 

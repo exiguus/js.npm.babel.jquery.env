@@ -1,26 +1,24 @@
-module.exports = (config) => {
+module.exports = function(config) {
   config.set({
+    basePath: '',
     plugins: [
       'karma-phantomjs-launcher',
       'karma-coverage',
-      'karma-jasmine',
-      'karma-webpack',
+      'karma-qunit',
+      'karma-jquery',
     ],
-    frameworks: ['jasmine'],
-    files: [{
-      pattern: 'src/js/*.class.test.js',
-      watched: false,
-    }, {
-      pattern: 'src/js/*.module.test.js',
-      watched: false,
-    }],
+    frameworks: ['qunit', 'jquery-3.1.1'],
+    files: [
+      '../src/js/jquery.mail.deobfuscate.js',
+      '../src/js/jquery.mail.deobfuscate.test.js',
+    ],
     browsers: ['PhantomJS'],
     reporters: ['progress', 'coverage'],
     preprocessors: {
-      'src/js/*.js': ['webpack', 'coverage'],
+      '../src/js/jquery.mail.deobfuscate.js': ['coverage'],
     },
     coverageReporter: {
-      dir: 'coverage/es6',
+      dir: '../coverage/jquery',
       reporters: [
         {type: 'html', subdir: 'report-html'},
         {type: 'lcov', subdir: 'report-lcov'},
@@ -30,22 +28,6 @@ module.exports = (config) => {
         {type: 'text', subdir: '.', file: 'text.txt'},
         {type: 'text-summary', subdir: '.', file: 'text-summary.txt'},
       ],
-    },
-    webpack: {
-      mode: 'production',
-      module: {
-        rules: [
-          // BABEL
-          {
-            test: /\.js$/,
-            loader: 'babel-loader',
-            exclude: /(node_modules)/,
-            options: {
-              compact: true,
-            },
-          },
-        ],
-      },
     },
   });
 };

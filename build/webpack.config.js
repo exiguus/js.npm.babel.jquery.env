@@ -1,21 +1,18 @@
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-// Is the current build a development build
-const IS_DEV = (process.env.NODE_ENV === 'dev');
 
 const dirNode = 'node_modules';
-const dirApp = path.join(__dirname, 'src');
+const dirApp = path.join(__dirname, '../src');
 
 /**
  * Webpack Configuration
  */
 module.exports = {
+  mode: 'development',
   entry: {
-    vendor: [
-      'lodash',
-    ],
+    // vendor: [
+    //   'lodash',
+    // ],
     bundle: path.join(dirApp, 'index.js'),
   },
   resolve: {
@@ -24,15 +21,6 @@ module.exports = {
       dirApp,
     ],
   },
-  plugins: [
-    new webpack.DefinePlugin({
-      IS_DEV: IS_DEV,
-    }),
-
-    new HtmlWebpackPlugin({
-      template: path.join(dirApp, 'index.html'),
-    }),
-  ],
   module: {
     rules: [
       // BABEL
@@ -43,6 +31,11 @@ module.exports = {
         options: {
           compact: true,
         },
+      },
+      // CSS
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },

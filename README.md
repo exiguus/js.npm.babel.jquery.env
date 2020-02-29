@@ -15,7 +15,7 @@ ES6 Development Environment includes [Webpack4](https://webpack.js.org/), [Babel
 ### Webpack4
 Run Webpack4 in development mode with babel-loader ECMA2015 support.
 
-```
+```console
 npm run dev
 ```
 
@@ -23,7 +23,7 @@ Runs [Webpack4](https://webpack.js.org/) with webpack-dev-server and babel-loade
 
 Also runs the [Karma](https://karma-runner.github.io/)/[Jasmine](https://jasmine.github.io/) test in development mode:
 
-```
+```console
 npm run dev-karma
 ```
 
@@ -34,7 +34,7 @@ Run Karma/Jasmine test with [Webpack4](https://webpack.js.org/)/babel-loader and
 
 Run the [Karma](https://karma-runner.github.io/)/[Jasmine](https://jasmine.github.io/) test in single-run mode for CI:
 
-```
+```console
 npm run test-jasmine-coverage
 ```
 
@@ -42,7 +42,7 @@ npm run test-jasmine-coverage
 ### jQuery
 [jQuery](https://jquery.com/) Development Environment includes [Grunt](https://gruntjs.com/) and [QUnit](https://qunitjs.com/).
 
-```
+```console
 open src/index.jquery.html
 ```
 
@@ -52,7 +52,7 @@ Run [Karma](https://karma-runner.github.io/)/[QUnit](https://qunitjs.com/) test 
 
 Run the [Karma](https://karma-runner.github.io/)/[QUnit](https://qunitjs.com/) test in single-run mode for CI:
 
-```
+```console
 npm run test-qunit-coverage
 ```
 
@@ -60,39 +60,39 @@ npm run test-qunit-coverage
 
 Run `node-qunit-phantomjs` against the `dist` folder:
 
-```
+```console
 npm run test-qunit && npm run test-qunit-min
 ```
 
 Run [QUnit](https://qunitjs.com/) test in development:
 
-```
+```console
 open src/index.jquery.test.html
 ```
 
 or against the uglify version
 
-```
+```console
 open src/index.jquery.test.min.html
 ```
 
 ## Test
 Run [QUnit](https://qunitjs.com/) and [Jasmine](https://jasmine.github.io/) Unit and Integration Tests in production mode for CI:
 
-```
+```console
 npm test
 ```
 
 Run `npm run build` and test ES6 class/modules in `src/js/*.test.js` and jQuery Plugins in `src/index.jquery.test.html` or `src/index.jquery.min.test.html`, generate Coverage Reports and Documentation.
 
-Take a look at the [Karma](https://karma-runner.github.io/) configuration at `karma.jquery.config.js` or `karma.es6.config.js` and into `src/index.jquery.test.html`or `src/index.jquery.test.min.html`
+Take a look at the [Karma](https://karma-runner.github.io/) configuration at `build/karma.jquery.config.js` or `build/karma.es6.config.js` and into `src/index.jquery.test.html`or `src/index.jquery.test.min.html`
 
 Note: `npm run dist` must run before the CI tests are running.
 
 ## Dist
 Run [Grunt](https://gruntjs.com/) Build Tasks for `dist/`.
 
-```
+```console
 npm run dist
 ```
 
@@ -102,6 +102,9 @@ See `build/helper/_grunt/` for all tasks.
 
 Take a look into `build/helper/config.js` to setup config variables or the usebanner.
 Also `Gruntfile.js` and `build/helper/_grunt/` may be interesting.
+
+The Webpack config can be found in `build/`. For `dist/` the component is build as UMD Library.
+
 
 Note: [Grunt](https://gruntjs.com/) use [jit](https://www.npmjs.com/package/jit-grunt) to load [Grunt](https://gruntjs.com/) Tasks.
 
